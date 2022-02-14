@@ -4,18 +4,16 @@
 #include <array>
 #include <string>
 
-//Discord SDK Stuff.
-#include "DiscordSDK/include/discord_rpc.h"
-#include "DiscordSDK/include/discord_register.h"
 
-static bool gInit = true;
+#include "discord_rpc.h"
+#include "discord_register.h"
 
 void SetupDiscord()
 {
     printf("does this get called?\n");
 		DiscordEventHandlers handlers;
 		memset(&handlers, 0, sizeof(handlers));
-		Discord_Initialize("935720284223307836", &handlers, 1, "0");
+		Discord_Initialize("", &handlers, 1, "0");
 
 }
 std::string ee;
@@ -92,6 +90,5 @@ int main()
             }
             UpdateDiscord();
         }
-    //Update it.
 
 }
